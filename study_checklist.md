@@ -474,96 +474,96 @@ This checklist will guide you in preparing detailed answers for each topic in yo
         *   [x] **Exam Angle (from pyqs.md):** "Explain services provided by DNS," "Short Note."
 
     *   **HTTP (HyperText Transfer Protocol):**
-        *   [ ] **Purpose:** Protocol for fetching resources like HTML documents (foundation of data communication for WWW).
-        *   [ ] **Client-Server Model:** Explain.
-        *   [ ] **Persistent vs. Non-persistent Connections:**
-            *   [ ] **Non-persistent:** One TCP connection per object. Explain overhead.
-            *   [ ] **Persistent:** Multiple objects over one TCP connection (with/without pipelining). Explain benefits.
-        *   [ ] **Request/Response Message Format (General Structure):**
-            *   [ ] **Request Message:** Start Line (Method, URL, Version), Headers (Host, User-Agent, Accept, etc.), Body (optional).
-            *   [ ] **Response Message:** Status Line (Version, Status Code, Status Phrase), Headers (Content-Type, Content-Length, Server, etc.), Body (requested resource).
-        *   [ ] **Common HTTP Methods:** GET, POST, HEAD, PUT, DELETE (brief purpose).
-        *   [ ] **Common Status Codes:** 200 OK, 301 Moved Permanently, 400 Bad Request, 404 Not Found, 500 Internal Server Error (brief meaning).
-        *   [ ] **Exam Angle (from pyqs.md):** "Request/Response message format," "Persistent vs. Non-persistent," "Short Note."
+        *   [x] **Purpose:** Protocol for fetching resources like HTML documents (foundation of data communication for WWW).
+        *   [x] **Client-Server Model:** Explain.
+        *   [x] **Persistent vs. Non-persistent Connections:**
+            *   [x] **Non-persistent:** One TCP connection per object. Explain overhead.
+            *   [x] **Persistent:** Multiple objects over one TCP connection (with/without pipelining). Explain benefits.
+        *   [x] **Request/Response Message Format (General Structure):**
+            *   [x] **Request Message:** Start Line (Method, URL, Version), Headers (Host, User-Agent, Accept, etc.), Body (optional).
+            *   [x] **Response Message:** Status Line (Version, Status Code, Status Phrase), Headers (Content-Type, Content-Length, Server, etc.), Body (requested resource).
+        *   [x] **Common HTTP Methods:** GET, POST, HEAD, PUT, DELETE (brief purpose).
+        *   [x] **Common Status Codes:** 200 OK, 301 Moved Permanently, 400 Bad Request, 404 Not Found, 500 Internal Server Error (brief meaning).
+        *   [x] **Exam Angle (from pyqs.md):** "Request/Response message format," "Persistent vs. Non-persistent," "Short Note."
 
     *   **SMTP (Simple Mail Transfer Protocol):**
-        *   [ ] **Purpose:** Protocol for sending (pushing) email messages between mail servers and from MUA to MTA.
-        *   [ ] **Basic Commands (Conceptual Understanding of interaction):**
-            *   [ ] `HELO`/`EHLO` (Identify client).
-            *   [ ] `MAIL FROM:` (Sender's email).
-            *   [ ] `RCPT TO:` (Recipient's email).
-            *   [ ] `DATA` (Start of message body).
-            *   [ ] `QUIT`.
-        *   [ ] **TCP Port:** Uses TCP port 25.
-        *   [ ] **Not for retrieving mail** (POP3/IMAP do that).
-        *   [ ] **Exam Angle (from pyqs.md):** "Basic commands," "Purpose," "Short Note."
+        *   [x] **Purpose:** Protocol for sending (pushing) email messages between mail servers and from MUA to MTA.
+        *   [x] **Basic Commands (Conceptual Understanding of interaction):**
+            *   [x] `HELO`/`EHLO` (Identify client).
+            *   [x] `MAIL FROM:` (Sender's email).
+            *   [x] `RCPT TO:` (Recipient's email).
+            *   [x] `DATA` (Start of message body).
+            *   [x] `QUIT`.
+        *   [x] **TCP Port:** Uses TCP port 25.
+        *   [x] **Not for retrieving mail** (POP3/IMAP do that).
+        *   [x] **Exam Angle (from pyqs.md):** "Basic commands," "Purpose," "Short Note."
 
     *   **SNMP (Simple Network Management Protocol) (Briefly):**
-        *   [ ] **Purpose:** Monitoring and managing network devices (routers, switches, servers).
-        *   [ ] **Components:**
-            *   [ ] **Manager:** (NMS - Network Management Station) sends requests, receives traps.
-            *   [ ] **Agent:** Runs on managed devices, responds to manager, sends traps.
-            *   [ ] **MIB (Management Information Base):** Database of manageable objects on the agent.
-        *   [ ] **Basic Operations:** GET, SET, TRAP.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain SNMP and its functions."
+        *   [x] **Purpose:** Monitoring and managing network devices (routers, switches, servers).
+        *   [x] **Components:**
+            *   [x] **Manager:** (NMS - Network Management Station) sends requests, receives traps.
+            *   [x] **Agent:** Runs on managed devices, responds to manager, sends traps.
+            *   [x] **MIB (Management Information Base):** Database of manageable objects on the agent.
+        *   [x] **Basic Operations:** GET, SET, TRAP.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain SNMP and its functions."
 
     *   **Electronic Mail (General Components):**
-        *   [ ] **MUA (Mail User Agent):** Client software (e.g., Outlook, Gmail web interface).
-        *   [ ] **MTA (Mail Transfer Agent):** Mail server software (e.g., Postfix, Sendmail) - uses SMTP.
-        *   [ ] **MDA (Mail Delivery Agent):** Delivers email to recipient's mailbox.
-        *   [ ] Briefly explain the flow of an email using these components.
-        *   [ ] **Exam Angle (from pyqs.md):** "What is Electronic Mailing? Components."
+        *   [x] **MUA (Mail User Agent):** Client software (e.g., Outlook, Gmail web interface).
+        *   [x] **MTA (Mail Transfer Agent):** Mail server software (e.g., Postfix, Sendmail) - uses SMTP.
+        *   [x] **MDA (Mail Delivery Agent):** Delivers email to recipient's mailbox.
+        *   [x] Briefly explain the flow of an email using these components.
+        *   [x] **Exam Angle (from pyqs.md):** "What is Electronic Mailing? Components."
 
 **4. Topic: Miscellaneous & Short Note Topics**
 
     *   **Finite State Machines (FSM):**
-        *   [ ] **What they are:** A model of computation with states, transitions, inputs, and outputs.
-        *   [ ] **How they model protocols:** Show a very simple example (e.g., Stop-and-Wait ARQ with states like "Ready to Send," "Waiting for ACK").
-        *   [ ] **Benefits:** Precise specification, aids in implementation and verification.
-        *   [ ] **Exam Angle (from pyqs.md):** "What is FSM model? How used in protocols? Explain."
+        *   [x] **What they are:** A model of computation with states, transitions, inputs, and outputs.
+        *   [x] **How they model protocols:** Show a very simple example (e.g., Stop-and-Wait ARQ with states like "Ready to Send," "Waiting for ACK").
+        *   [x] **Benefits:** Precise specification, aids in implementation and verification.
+        *   [x] **Exam Angle (from pyqs.md):** "What is FSM model? How used in protocols? Explain."
 
     *   **Fragmentation & Reassembly:**
-        *   [ ] **Why needed:** When a large packet from an upper layer needs to be sent over a network whose MTU (Maximum Transmission Unit) is smaller.
-        *   [ ] **How it works (IP Fragmentation):**
-            *   [ ] **IP Header Fields Involved:**
+        *   [x] **Why needed:** When a large packet from an upper layer needs to be sent over a network whose MTU (Maximum Transmission Unit) is smaller.
+        *   [x] **How it works (IP Fragmentation):**
+            *   [x] **IP Header Fields Involved:**
                 *   Identification (ID): To identify fragments belonging to the same original datagram.
                 *   Flags (DF - Don't Fragment, MF - More Fragments).
                 *   Fragment Offset: Position of this fragment in the original datagram.
-            *   [ ] Explain how routers fragment and how the destination host reassembles.
-        *   [ ] **Example:** Show a large packet being broken into smaller fragments with correct ID, MF, and Offset values.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain Fragmentation and reassembly using suitable example," "Short Note."
+            *   [x] Explain how routers fragment and how the destination host reassembles.
+        *   [x] **Example:** Show a large packet being broken into smaller fragments with correct ID, MF, and Offset values.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain Fragmentation and reassembly using suitable example," "Short Note."
 
     *   **Queuing Theory (M/M/1, Little's Theorem - Very Basic):**
-        *   [ ] **M/M/1:** Briefly explain what it represents (Poisson arrivals, Exponential service times, 1 server).
-        *   [ ] **Little's Theorem:** `L = λW` (Average number of items in system = Arrival rate * Average time in system). Explain terms. Simple conceptual application.
-        *   [ ] **Focus:** Conceptual understanding, not deep math unless specifically preparing for older CBGS type questions.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain Little's theorem," "What is M/M/1?"
+        *   [x] **M/M/1:** Briefly explain what it represents (Poisson arrivals, Exponential service times, 1 server).
+        *   [x] **Little's Theorem:** `L = λW` (Average number of items in system = Arrival rate * Average time in system). Explain terms. Simple conceptual application.
+        *   [x] **Focus:** Conceptual understanding, not deep math unless specifically preparing for older CBGS type questions.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain Little's theorem," "What is M/M/1?"
 
     *   **IEEE 802 series (General Awareness):**
-        *   [ ] Know it's a family of standards for LANs/MANs.
-        *   [ ] Mention a few key ones and what they cover:
+        *   [x] Know it's a family of standards for LANs/MANs.
+        *   [x] Mention a few key ones and what they cover:
             *   802.3 (Ethernet - CSMA/CD).
             *   802.11 (Wireless LAN - WiFi - CSMA/CA).
             *   802.15 (Wireless PAN - Bluetooth).
             *   802.16 (Broadband Wireless Access - WiMAX).
-        *   [ ] **Exam Angle (from pyqs.md):** "Short Note on IEEE Standards 802 series."
+        *   [x] **Exam Angle (from pyqs.md):** "Short Note on IEEE Standards 802 series."
 
     *   **FDDI (Fiber Distributed Data Interface) (Briefly for short note):**
-        *   [ ] Token-passing, dual-ring LAN using fiber optic cable. High speed (for its time).
+        *   [x] Token-passing, dual-ring LAN using fiber optic cable. High speed (for its time).
     *   **Service Primitives (Short note):**
-        *   [ ] Define: Operations available to a layer from the layer below it (e.g., Request, Indication, Response, Confirm). Simple example of how they are used in layer interaction.
+        *   [x] Define: Operations available to a layer from the layer below it (e.g., Request, Indication, Response, Confirm). Simple example of how they are used in layer interaction.
     *   **Frame Relay (Short Note):**
-        *   [ ] WAN protocol, uses virtual circuits (PVCs, SVCs), connection-oriented at DLL.
+        *   [x] WAN protocol, uses virtual circuits (PVCs, SVCs), connection-oriented at DLL.
 
 **5. MEGA REVISION & Practice**
 
-    *   [ ] Go through your prepared detailed answers for ALL topics.
-    *   [ ] Use active recall: Cover your notes and try to explain the concept aloud or write down key points.
-    *   [ ] **Prioritize:** Focus on the "Key Focus Areas" identified in `pyqs.md` analysis and your personal weak spots.
-    *   [ ] **Rework Numerical Problems:** Subnetting, Aloha throughput, Shannon, TCP throughput. Ensure you can solve them quickly and accurately.
-    *   [ ] **Draw Key Diagrams from Memory:** OSI/TCP-IP, TCP/UDP Headers, Sliding Window timelines, 3-way/4-way handshakes.
-    *   [ ] **Practice Short Note Questions:** For common short note topics, jot down 3-4 key points for each.
-    *   [ ] **Simulate Exam Conditions:** Try answering a few full questions from past papers within a time limit.
+    *   [x] Go through your prepared detailed answers for ALL topics.
+    *   [x] Use active recall: Cover your notes and try to explain the concept aloud or write down key points.
+    *   [x] **Prioritize:** Focus on the "Key Focus Areas" identified in `pyqs.md` analysis and your personal weak spots.
+    *   [x] **Rework Numerical Problems:** Subnetting, Aloha throughput, Shannon, TCP throughput. Ensure you can solve them quickly and accurately.
+    *   [x] **Draw Key Diagrams from Memory:** OSI/TCP-IP, TCP/UDP Headers, Sliding Window timelines, 3-way/4-way handshakes.
+    *   [x] **Practice Short Note Questions:** For common short note topics, jot down 3-4 key points for each.
+    *   [x] **Simulate Exam Conditions:** Try answering a few full questions from past papers within a time limit.
 
 ---
 
