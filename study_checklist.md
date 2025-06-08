@@ -66,127 +66,119 @@ This checklist will guide you in preparing detailed answers for each topic in yo
         *   [x] **Exam Angle (from pyqs.md):** Be ready to "Explain DLL services."
 
     *   **Error Detection & Correction Mechanisms:**
-        *   [ ] **Parity (Simple, 2D):**
-            *   [ ] Explain the concept (adding a bit to make the number of 1s even or odd).
-            *   [ ] Provide a simple example for both.
-            *   [ ] Discuss limitations (e.g., simple parity detects only odd number of bit errors).
-        *   [ ] **Checksum:**
-            *   [ ] Explain the concept (summing data segments, transmitting the sum/negative sum).
-            *   [ ] Provide a simple conceptual example (no need for complex calculations unless specified in problems).
-        *   [ ] **CRC (Cyclic Redundancy Check):**
-            *   [ ] Explain the conceptual understanding (based on polynomial division, generating a checksum).
-            *   [ ] Describe its advantages (stronger error detection).
-            *   [ ] (Optional, if time permits or frequently asked) Understand a very simple example of polynomial division.
-        *   [ ] **Comparison:** Briefly compare the effectiveness of these methods.
-        *   [ ] **Exam Angle (from pyqs.md):** Be ready to "Explain different error detection and correction mechanisms with examples."
+        *   [x] **Parity (Simple, 2D):**
+            *   [x] Explain the concept (adding a bit to make the number of 1s even or odd).
+            *   [x] Provide a simple example for both.
+            *   [x] Discuss limitations (e.g., simple parity detects only odd number of bit errors).
+        *   [x] **Checksum:**
+            *   [x] Explain the concept (summing data segments, transmitting the sum/negative sum).
+            *   [x] Provide a simple conceptual example (no need for complex calculations unless specified in problems).
+        *   [x] **CRC (Cyclic Redundancy Check):**
+            *   [x] Explain the conceptual understanding (based on polynomial division, generating a checksum).
+            *   [x] Describe its advantages (stronger error detection).
+            *   [x] (Optional, if time permits or frequently asked) Understand a very simple example of polynomial division.
+        *   [x] **Comparison:** Briefly compare the effectiveness of these methods.
+        *   [x] **Exam Angle (from pyqs.md):** Be ready to "Explain different error detection and correction mechanisms with examples."
 
     *   **Flow Control Mechanisms (Conceptual):**
-        *   [ ] **Stop-and-Wait:**
-            *   [ ] Explain the basic idea (send one frame, wait for ACK before sending next).
-            *   [ ] Diagram: Show a simple timeline with frame, ACK, and potential timeout.
-            *   [ ] Discuss its simplicity and inefficiency (especially on long-delay links).
-        *   [ ] **Sliding Window:**
-            *   [ ] Explain the core concept (allowing multiple frames to be in transit).
-            *   [ ] Explain the need for sequence numbers and acknowledgements (ACKs).
-            *   [ ] Define sender and receiver window concepts at a high level.
-        *   [ ] **Exam Angle (from pyqs.md):** Be ready to "Explain flow control mechanisms," "Describe stop and wait," and explain "sliding window flow control."
+        *   [x] **Stop-and-Wait:**
+            *   [x] Explain the basic idea (send one frame, wait for ACK before sending next).
+            *   [x] Diagram: Show a simple timeline with frame, ACK, and potential timeout.
+            *   [x] Discuss its simplicity and inefficiency (especially on long-delay links).
+        *   [x] **Sliding Window:**
+            *   [x] Explain the core concept (allowing multiple frames to be in transit).
+            *   [x] Explain the need for sequence numbers and acknowledgements (ACKs).
+            *   [x] Define sender and receiver window concepts at a high level.
+        *   [x] **Exam Angle (from pyqs.md):** Be ready to "Explain flow control mechanisms," "Describe stop and wait," and explain "sliding window flow control."
 
 **3. Topic: DLL Protocols (Sliding Window Protocols)**
 
-    *   **Stop-and-Wait ARQ (Automatic Repeat reQuest):**
-        *   [ ] **Working Principle:** Explain how it handles errors (using ACKs and timeouts for retransmission).
-        *   [ ] **Diagrams:**
-            *   [ ] Successful transmission.
-            *   [ ] Lost frame scenario.
-            *   [ ] Lost ACK scenario.
-            *   [ ] Premature timeout scenario.
-        *   [ ] **Efficiency:** Discuss its limitations in terms of channel utilization.
-        *   [ ] **Recall Cue:** "Send 1, Wait 1."
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain with diagrams," "Describe."
+    *   **Stop-and-Wait ARQ:**
+        *   [x] **Working Principle:** Explain how it handles errors (using ACKs and timeouts for retransmission).
+        *   [x] **Diagrams:**
+            *   [x] Successful transmission.
+            *   [x] Lost frame scenario.
+            *   [x] Lost ACK scenario.
+            *   [x] Premature timeout scenario.
+        *   [x] **Efficiency:** Discuss its limitations in terms of channel utilization.
+        *   [x] **Recall Cue:** "Send 1, Wait 1."
+        *   [x] **Exam Angle (from pyqs.md):** "Explain with diagrams," "Describe."
 
     *   **Go-Back-N ARQ:**
-        *   [ ] **Working Principle:**
-            *   [ ] Sender window size (Ws > 1), Receiver window size (Wr = 1).
-            *   [ ] How it handles lost/damaged frames (sender retransmits the lost frame and all subsequent frames).
-            *   [ ] Cumulative ACKs (ACK N means all frames up to N-1 received).
-        *   [ ] **Diagram Scenarios:**
-            *   [ ] Successful transmission.
-            *   [ ] Frame loss (show retransmission of multiple frames).
-            *   [ ] Lost ACK (show how timeout or subsequent ACKs recover).
-        *   [ ] **Buffering:** Receiver doesn't buffer out-of-order frames.
-        *   [ ] **Recall Cue:** "Go back and resend all from error."
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working principle," "Diagram scenarios," "Compare with SR."
+        *   [x] **Working Principle:** Explain sender/receiver window size (receiver window = 1), cumulative ACKs.
+        *   [x] **Retransmission Strategy:** How it retransmits the erroneous frame and all subsequent frames.
+        *   [x] **Diagram Scenarios:**
+            *   [x] Frame loss.
+            *   [x] ACK loss (and how cumulative ACK can help).
+        *   [x] **Advantages/Disadvantages:** (e.g., more efficient than S&W, but can be wasteful on error-prone links).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working principle," "Explain with diagrams."
 
     *   **Selective Repeat ARQ:**
-        *   [ ] **Working Principle:**
-            *   [ ] Sender window size (Ws > 1), Receiver window size (Wr > 1, usually Ws = Wr).
-            *   [ ] How it handles lost/damaged frames (sender retransmits only the specific lost/damaged frame).
-            *   [ ] Individual ACKs (ACK N means frame N received).
-            *   [ ] Buffering at the receiver for out-of-order frames.
-        *   [ ] **Diagram Scenarios:**
-            *   [ ] Successful transmission.
-            *   [ ] Frame loss (show retransmission of only the lost frame and buffering at receiver).
-            *   [ ] Lost ACK.
-        *   [ ] **Recall Cue:** "Selectively repeat only the bad ones."
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working principle," "Diagram scenarios," "Compare with GBN."
+        *   [x] **Working Principle:** Explain sender/receiver window sizes (both > 1), individual ACKs.
+        *   [x] **Retransmission Strategy:** How it retransmits only the specific lost/damaged frame.
+        *   [x] **Buffering:** Receiver buffers correctly received but out-of-order frames.
+        *   [x] **Diagram Scenarios:**
+            *   [x] Frame loss (show buffering of subsequent frames and later delivery).
+            *   [x] Lost ACK (show individual timer for frame causing retransmission).
+        *   [x] **Window Size Constraint:** `Ws + Wr <= 2^m` (or `Ws = Wr = 2^(m-1)`).
+        *   [x] **Recall Cue:** "Selectively resend only what's missing."
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working principle," "Diagram scenarios," "Compare with GBN."
 
-    *   **Comparison: Go-Back-N vs. Selective Repeat:**
-        *   [ ] Create a table comparing them based on:
-            *   [ ] Efficiency/Throughput (SR generally better).
-            *   [ ] Complexity (SR more complex).
-            *   [ ] Buffering requirements (SR needs more at receiver).
-            *   [ ] Number of retransmissions.
-            *   [ ] Window sizes.
+    *   **Comparison: GBN vs. SR:**
+        *   [x] **Table:** Create a table summarizing key differences (Retransmission strategy, Receiver window size, Buffering at receiver, ACKs, Complexity, Efficiency on noisy links).
+        *   [x] **Explanation:** Elaborate on each point in the table.
+        *   [x] **Use Cases:** When to prefer one over the other.
+        *   [x] **Exam Angle (from pyqs.md):** This is a frequent comparison question. "Compare GBN and SR."
 
 **4. Topic: Framing & HDLC**
 
     *   **Framing Methods:**
-        *   [ ] **Character Count:** Explain, discuss problems (error in count).
-        *   [ ] **Character Stuffing (Byte Stuffing):**
-            *   [ ] Explain (using STX, ETX, DLE).
-            *   [ ] Provide an example of stuffing and destuffing.
-        *   [ ] **Bit Stuffing:**
-            *   [ ] Explain (inserting a 0 after a certain number of consecutive 1s).
-            *   [ ] Provide an example of stuffing and destuffing (use the May 2018 CBGS/GS problem as a template).
-        *   [ ] **Physical Layer Coding Violations:** Briefly explain the concept.
-        *   [ ] **Focus:** Deeply understand Bit Stuffing with examples.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain framing methods," "What is bit/byte stuffing? Explain with example," numerical bit stuffing problem.
+        *   [x] **Character Count:** Explain, diagram, pros/cons (esp. error vulnerability).
+        *   [x] **Character Stuffing (Byte Stuffing):** Explain FLAG and ESC, diagram an example of stuffing/destuffing.
+        *   [x] **Bit Stuffing:** Explain flag pattern (e.g., 01111110), how 0 is inserted after five 1s, diagram an example. **(Practice this as per May 2018 CBGS/GS)**.
+        *   [x] **Physical Layer Coding Violations:** Explain the concept.
+        *   [x] **Comparison:** Briefly compare methods.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain different methods," "List and explain," "Explain bit stuffing with example."
 
     *   **HDLC (High-Level Data Link Control):**
-        *   [ ] **Frame Format:**
-            *   [ ] Draw the HDLC frame structure: `Flag | Address | Control | Information | FCS | Flag`.
-            *   [ ] For each field, briefly explain its purpose (e.g., Flag: 01111110, Address: for secondary station, Control: type of frame - I, S, U, Information: data, FCS: error detection).
-        *   [ ] (Optional, if time) Briefly mention the types of frames (Information, Supervisory, Unnumbered).
-        *   [ ] **Exam Angle (from pyqs.md):** "Draw frame format," "Explain use of fields."
+        *   [x] **Frame Format:** Draw and label: Flag, Address, Control, Information, FCS, Flag.
+        *   [x] **Function of Each Field:** Briefly explain what each field is for.
+            *   [x] **Flag:** `01111110` (and bit stuffing context).
+            *   [x] **Address:** Identifies secondary station.
+            *   [x] **Control:** Key field! Explain I-frames (Information), S-frames (Supervisory - RR, RNR, REJ, SREJ), U-frames (Unnumbered - link setup/teardown). Mention N(S), N(R), P/F bit.
+            *   [x] **Information:** User data (in I-frames).
+            *   [x] **FCS:** Error detection (CRC).
+        *   [x] **Recall Cue:** "Flags Always Control Information For Sure, Flags."
+        *   [x] **Exam Angle (from pyqs.md):** "Draw frame format and state function of each field," "Explain types of frames in HDLC."
 
 **5. Topic: Introduction to MAC Sublayer & ALOHA**
 
-    *   **Function of MAC layer:**
-        *   [ ] Explain its primary role: Controlling access to the shared medium.
-        *   [ ] Mention relation to DLL.
-        *   [ ] **Exam Angle (from pyqs.md):** "What is the function of MAC layer?"
+    *   **Function of MAC Sublayer:**
+        *   [x] **Primary Role:** Explain that MAC is primarily about controlling access to a shared medium (preventing/managing collisions).
+        *   [x] **Other Functions:** Briefly mention its role in MAC addressing and framing (adding MAC headers).
+        *   [x] **Exam Angle (from pyqs.md):** "What is MAC?" (This is the core of this question).
 
     *   **ALOHA Protocols:**
-        *   [ ] **Pure ALOHA:**
-            *   [ ] **Principle:** Transmit whenever ready.
-            *   [ ] **Vulnerable Period:** Explain (2 * Frame transmission time). Diagram this.
-            *   [ ] **Maximum Throughput:** State it (18.4% or 0.184).
-            *   [ ] **Numerical Problems:** Practice calculating throughput or max number of users given parameters (e.g., May 2023 Q4b).
-        *   [ ] **Slotted ALOHA:**
-            *   [ ] **Principle:** Transmit only at the beginning of a time slot.
-            *   [ ] **Vulnerable Period:** Explain (1 * Frame transmission time). Diagram this.
-            *   [ ] **Maximum Throughput:** State it (36.8% or 0.368).
-            *   [ ] **Numerical Problems:** Practice (e.g., May 2022 Q2b, May 2018 CBGS Q5b).
-        *   [ ] **Comparison:** Briefly compare Pure and Slotted ALOHA (throughput, complexity).
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working principle," "vulnerable period," "max throughput," numerical problems.
+        *   [x] **Pure ALOHA:**
+            *   [x] **Principle:** Transmit whenever ready.
+            *   [x] **Vulnerable Period:** Explain (2 * Frame transmission time). Diagram this.
+            *   [x] **Maximum Throughput:** State it (18.4% or 0.184).
+            *   [x] **Numerical Problems:** Practice calculating throughput or max number of users given parameters (e.g., May 2023 Q4b).
+        *   [x] **Slotted ALOHA:**
+            *   [x] **Principle:** Transmit only at the beginning of a time slot.
+            *   [x] **Vulnerable Period:** Explain (1 * Frame transmission time). Diagram this.
+            *   [x] **Maximum Throughput:** State it (36.8% or 0.368).
+            *   [x] **Numerical Problems:** Practice (e.g., May 2022 Q2b, May 2018 CBGS Q5b).
+        *   [x] **Comparison:** Briefly compare Pure and Slotted ALOHA (throughput, complexity).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working principle," "vulnerable period," "max throughput," numerical problems.
 
-**6. Review Day 1**
+**6. Review Day 1 & Day 2**
 
-    *   [ ] **Active Recall:** Without looking at notes, try to:
-        *   [ ] Draw OSI and TCP/IP models, label layers, and list one function for each.
-        *   [ ] Explain GBN vs. SR to an imaginary student, including diagrams for frame loss.
-        *   [ ] Explain pure vs. slotted ALOHA and their vulnerable periods.
-    *   [ ] **Identify Weak Spots:** Note any topics you struggled to recall and revisit them.
+    *   [x] **Active Recall:**
+        *   [x] Explain the difference between CSMA/CD and CSMA/CA, including BEB and RTS/CTS.
+        *   [x] Take a sample IP address and subnet it for a given number of subnets. Calculate all relevant addresses.
+        *   [x] Verbally explain the steps of Distance Vector and Link State routing using a small mental graph.
+    *   [x] **Identify Weak Spots:** Revisit subnetting calculations and routing algorithm examples if needed.
 
 ---
 
@@ -195,173 +187,173 @@ This checklist will guide you in preparing detailed answers for each topic in yo
 **1. Topic: CSMA Protocols & Collision-Free**
 
     *   **CSMA (Carrier Sense Multiple Access):**
-        *   [ ] **Core Idea:** "Listen before talk."
-        *   [ ] **Persistent CSMA (1-persistent, p-persistent):**
-            *   [ ] **1-persistent:** Explain (sense channel; if idle, transmit; if busy, keep sensing and transmit immediately when idle). Discuss propagation delay issues leading to collisions.
-            *   [ ] **p-persistent:** Explain (sense channel; if idle, transmit with probability 'p', or defer with probability '1-p'; if busy, wait and restart).
-            *   [ ] **Non-persistent:** Explain (sense channel; if idle, transmit; if busy, wait a random amount of time then restart).
-            *   [ ] **Pros/Cons:** For each persistence method, briefly list pros and cons (e.g., channel utilization, collision rates).
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain Persistent and Non-persistent CSMA."
+        *   [x] **Core Idea:** "Listen before talk."
+        *   [x] **Persistent CSMA (1-persistent, p-persistent):**
+            *   [x] **1-persistent:** Explain (sense channel; if idle, transmit; if busy, keep sensing and transmit immediately when idle). Discuss propagation delay issues leading to collisions.
+            *   [x] **p-persistent:** Explain (sense channel; if idle, transmit with probability 'p', or defer with probability '1-p'; if busy, wait and restart).
+            *   [x] **Non-persistent:** Explain (sense channel; if idle, transmit; if busy, wait a random amount of time then restart).
+            *   [x] **Pros/Cons:** For each persistence method, briefly list pros and cons (e.g., channel utilization, collision rates).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain Persistent and Non-persistent CSMA."
 
     *   **CSMA/CD (Collision Detection):**
-        *   [ ] **Working Principle:**
-            *   [ ] Explain the steps: Sense -> Transmit -> Detect Collision (while transmitting) -> Jam Signal -> Backoff.
-            *   [ ] Emphasize "detect while transmitting."
-            *   [ ] Where used: Ethernet.
-        *   [ ] **Binary Exponential Backoff (BEB):**
-            *   [ ] Explain how it works: After a collision, double the random waiting time range for each subsequent collision.
-            *   [ ] Provide a simple example calculation of backoff time ranges for a few collisions.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working principle," "BEB with example," "Short Note."
+        *   [x] **Working Principle:**
+            *   [x] Explain the steps: Sense -> Transmit -> Detect Collision (while transmitting) -> Jam Signal -> Backoff.
+            *   [x] Emphasize "detect while transmitting."
+            *   [x] Where used: Ethernet.
+        *   [x] **Binary Exponential Backoff (BEB):**
+            *   [x] Explain how it works: After a collision, double the random waiting time range for each subsequent collision.
+            *   [x] Provide a simple example calculation of backoff time ranges for a few collisions.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working principle," "BEB with example," "Short Note."
 
     *   **CSMA/CA (Collision Avoidance):**
-        *   [ ] **Working Principle:**
-            *   [ ] Explain why it's needed (e.g., wireless, can't easily detect collisions while transmitting).
-            *   [ ] Explain RTS/CTS (Request to Send/Clear to Send) mechanism for hidden station problem. Draw a simple diagram illustrating hidden stations and how RTS/CTS helps.
-            *   [ ] Interframe Spacing (IFS), contention window.
-        *   [ ] **Where used:** WiFi (IEEE 802.11).
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working principle," "RTS/CTS," "Short Note."
+        *   [x] **Working Principle:**
+            *   [x] Explain why it's needed (e.g., wireless, can't easily detect collisions while transmitting).
+            *   [x] Explain RTS/CTS (Request to Send/Clear to Send) mechanism for hidden station problem. Draw a simple diagram illustrating hidden stations and how RTS/CTS helps.
+            *   [x] Interframe Spacing (IFS), contention window.
+        *   [x] **Where used:** WiFi (IEEE 802.11).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working principle," "RTS/CTS," "Short Note."
 
     *   **Collision-Free Protocols (Briefly):**
-        *   [ ] **Concept:** Protocols that aim to avoid collisions altogether, often through reservations or taking turns.
-        *   [ ] **Binary Countdown:**
-            *   [ ] Explain the concept (stations broadcast their addresses bit by bit; higher addresses drop out).
-            *   [ ] Simple example.
-        *   [ ] **Adaptive Tree Walk Protocol:**
-            *   [ ] Explain the concept (nodes in a tree are probed to find ready stations).
-            *   [ ] Simple example (like the May 2018 GS problem: "Sixteen stations...").
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain Binary Countdown," "Explain Adaptive Tree Walk," solve related problems.
+        *   [x] **Concept:** Protocols that aim to avoid collisions altogether, often through reservations or taking turns.
+        *   [x] **Binary Countdown:**
+            *   [x] Explain the concept (stations broadcast their addresses bit by bit; higher addresses drop out).
+            *   [x] Simple example.
+        *   [x] **Adaptive Tree Walk Protocol:**
+            *   [x] Explain the concept (nodes in a tree are probed to find ready stations).
+            *   [x] Simple example (like the May 2018 GS problem: "Sixteen stations...").
+        *   [x] **Exam Angle (from pyqs.md):** "Explain Binary Countdown," "Explain Adaptive Tree Walk," solve related problems.
 
 **2. Topic: IP Addressing (Classes & Basics)**
 
     *   **IPv4 Address Structure:**
-        *   [ ] Explain: 32-bit, hierarchical, dotted decimal notation.
-        *   [ ] Show an example and identify network and host portions (conceptually, before classes).
+        *   [x] Explain: 32-bit, hierarchical, dotted decimal notation.
+        *   [x] Show an example and identify network and host portions (conceptually, before classes).
     *   **Classes (A, B, C, D, E):** For each class:
-        *   [ ] **Identifying Bits:** (e.g., Class A starts with 0, Class B with 10, Class C with 110).
-        *   [ ] **Range of First Octet:** (e.g., Class A: 1-126).
-        *   [ ] **Network/Host ID Bits:** How many bits for Network ID, how many for Host ID.
-        *   [ ] **Default Subnet Mask:** Write it in dotted decimal and CIDR notation (e.g., Class A: 255.0.0.0 or /8).
-        *   [ ] **Number of Networks/Hosts:** Formula and example calculation.
-        *   [ ] **Practice:** Given an IP address, identify its class, default mask, network ID, and host ID.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain various classes of IP addresses (network-ID bits, host-ID bits, etc.)," "Identify class."
+        *   [x] **Identifying Bits:** (e.g., Class A starts with 0, Class B with 10, Class C with 110).
+        *   [x] **Range of First Octet:** (e.g., Class A: 1-126).
+        *   [x] **Network/Host ID Bits:** How many bits for Network ID, how many for Host ID.
+        *   [x] **Default Subnet Mask:** Write it in dotted decimal and CIDR notation (e.g., Class A: 255.0.0.0 or /8).
+        *   [x] **Number of Networks/Hosts:** Formula and example calculation.
+        *   [x] **Practice:** Given an IP address, identify its class, default mask, network ID, and host ID.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain various classes of IP addresses (network-ID bits, host-ID bits, etc.)," "Identify class."
 
     *   **Special Addresses:**
-        *   [ ] **Loopback Address:** (e.g., 127.0.0.1) - Purpose.
-        *   [ ] **Private IP Addresses:** Ranges for Class A, B, C (e.g., 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) - Purpose (NAT).
-        *   [ ] **Broadcast Address:** Network broadcast (all host bits = 1), Limited broadcast (255.255.255.255) - Purpose.
-        *   [ ] **Network Address:** (all host bits = 0) - Purpose.
+        *   [x] **Loopback Address:** (e.g., 127.0.0.1) - Purpose.
+        *   [x] **Private IP Addresses:** Ranges for Class A, B, C (e.g., 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) - Purpose (NAT).
+        *   [x] **Broadcast Address:** Network broadcast (all host bits = 1), Limited broadcast (255.255.255.255) - Purpose.
+        *   [x] **Network Address:** (all host bits = 0) - Purpose.
     *   **Subnet Mask Concept (Introduction):**
-        *   [ ] Explain its purpose: To divide the host portion of an IP address into a subnet portion and a (smaller) host portion.
-        *   [ ] How it works (ANDing with IP address to get network address).
+        *   [x] Explain its purpose: To divide the host portion of an IP address into a subnet portion and a (smaller) host portion.
+        *   [x] How it works (ANDing with IP address to get network address).
 
 **3. Topic: Subnetting & CIDR**
 
     *   **Subnetting:**
-        *   [ ] **Purpose:** Explain why subnetting is done (e.g., manageability, security, reduce broadcast domain size, overcome shortage of network IDs).
-        *   [ ] **Process ("Borrowing Host Bits"):** Clearly explain how bits are borrowed from the host portion to create a subnet ID.
-        *   [ ] **Calculations (Given an IP block and number of subnets OR hosts per subnet):**
-            *   [ ] **New Subnet Mask:** Calculate it (in dotted decimal and CIDR).
-            *   [ ] **Number of Subnets Created:** (2^s, where s is subnet bits).
-            *   [ ] **Number of Usable Hosts per Subnet:** (2^h - 2, where h is remaining host bits).
-            *   [ ] **For each Subnet:**
-                *   [ ] **Network Address (Subnet ID):**
-                *   [ ] **First Usable Host Address:**
-                *   [ ] **Last Usable Host Address:**
-                *   [ ] **Broadcast Address for that Subnet:**
-        *   [ ] **INTENSIVE PRACTICE:** Work through MANY numerical examples, including May 2024 Q5. Create your own problems.
-        *   [ ] **Key Formulas/Steps:** Write down a clear step-by-step guide for yourself to solve subnetting problems.
-        *   [ ] **Exam Angle (from pyqs.md):** "What is subnet mask?", Numerical problems are VERY common.
+        *   [x] **Purpose:** Explain why subnetting is done (e.g., manageability, security, reduce broadcast domain size, overcome shortage of network IDs).
+        *   [x] **Process ("Borrowing Host Bits"):** Clearly explain how bits are borrowed from the host portion to create a subnet ID.
+        *   [x] **Calculations (Given an IP block and number of subnets OR hosts per subnet):**
+            *   [x] **New Subnet Mask:** Calculate it (in dotted decimal and CIDR).
+            *   [x] **Number of Subnets Created:** (2^s, where s is subnet bits).
+            *   [x] **Number of Usable Hosts per Subnet:** (2^h - 2, where h is remaining host bits).
+            *   [x] **For each Subnet:**
+                *   [x] **Network Address (Subnet ID):**
+                *   [x] **First Usable Host Address:**
+                *   [x] **Last Usable Host Address:**
+                *   [x] **Broadcast Address for that Subnet:**
+        *   [x] **INTENSIVE PRACTICE:** Work through MANY numerical examples, including May 2024 Q5. Create your own problems.
+        *   [x] **Key Formulas/Steps:** Write down a clear step-by-step guide for yourself to solve subnetting problems.
+        *   [x] **Exam Angle (from pyqs.md):** "What is subnet mask?", Numerical problems are VERY common.
 
     *   **CIDR (Classless Inter-Domain Routing):**
-        *   [ ] **Concept:** Explain how it eliminates the concept of rigid classes (A, B, C).
-        *   [ ] **/notation:** Explain what `/x` means (first x bits are the network prefix).
-        *   [ ] **Advantages:** Address space efficiency, route summarization (supernetting).
-        *   [ ] **Relation to Subnetting:** How subnet masks are represented in CIDR notation.
+        *   [x] **Concept:** Explain how it eliminates the concept of rigid classes (A, B, C).
+        *   [x] **/notation:** Explain what `/x` means (first x bits are the network prefix).
+        *   [x] **Advantages:** Address space efficiency, route summarization (supernetting).
+        *   [x] **Relation to Subnetting:** How subnet masks are represented in CIDR notation.
 
 **4. Topic: ARP, RARP, ICMP & IPv6 Intro**
 
     *   **ARP (Address Resolution Protocol):**
-        *   [ ] **Purpose:** Map IP address to MAC address on a local network.
-        *   [ ] **Working Principle:**
-            *   [ ] ARP Request (broadcast): "Who has IP address X, tell MAC address Y?"
-            *   [ ] ARP Reply (unicast): "I have IP address X, my MAC address is Z."
-            *   [ ] ARP Cache: How it's used to store mappings.
-        *   [ ] **Scenario:** Explain when ARP is used (e.g., host A wants to send a packet to host B on the same LAN).
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working of ARP," "Short Note."
+        *   [x] **Purpose:** Map IP address to MAC address on a local network.
+        *   [x] **Working Principle:**
+            *   [x] ARP Request (broadcast): "Who has IP address X, tell MAC address Y?"
+            *   [x] ARP Reply (unicast): "I have IP address X, my MAC address is Z."
+            *   [x] ARP Cache: How it's used to store mappings.
+        *   [x] **Scenario:** Explain when ARP is used (e.g., host A wants to send a packet to host B on the same LAN).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working of ARP," "Short Note."
 
     *   **RARP (Reverse ARP):**
-        *   [ ] **Purpose:** Map MAC address to IP address (less common now, BOOTP/DHCP largely replaced it).
-        *   [ ] **Basic Idea:** Client broadcasts its MAC, RARP server replies with IP.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain working of RARP."
+        *   [x] **Purpose:** Map MAC address to IP address (less common now, BOOTP/DHCP largely replaced it).
+        *   [x] **Basic Idea:** Client broadcasts its MAC, RARP server replies with IP.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain working of RARP."
 
     *   **ICMP (Internet Control Message Protocol):**
-        *   [ ] **Purpose:** Error reporting and diagnostic functions for IP. (IP itself is unreliable, ICMP provides feedback).
-        *   [ ] **Common Message Types (Explain purpose and simple scenario for each):**
-            *   [ ] Echo Request/Reply (used by `ping`).
-            *   [ ] Destination Unreachable (host, network, port unreachable).
-            *   [ ] Time Exceeded (TTL expired).
-            *   [ ] Redirect (better route exists).
-        *   [ ] **ICMP Frame Format (Briefly, if specified in pyqs.md):** Key fields like Type, Code, Checksum.
-        *   [ ] **Encapsulation:** ICMP messages are encapsulated within IP packets.
-        *   [ ] **Exam Angle (from pyqs.md):** "Brief note on ICMP using its frame formats," "Purpose," "Common message types," "Short Note."
+        *   [x] **Purpose:** Error reporting and diagnostic functions for IP. (IP itself is unreliable, ICMP provides feedback).
+        *   [x] **Common Message Types (Explain purpose and simple scenario for each):**
+            *   [x] Echo Request/Reply (used by `ping`).
+            *   [x] Destination Unreachable (host, network, port unreachable).
+            *   [x] Time Exceeded (TTL expired).
+            *   [x] Redirect (better route exists).
+        *   [x] **ICMP Frame Format (Briefly, if specified in pyqs.md):** Key fields like Type, Code, Checksum.
+        *   [x] **Encapsulation:** ICMP messages are encapsulated within IP packets.
+        *   [x] **Exam Angle (from pyqs.md):** "Brief note on ICMP using its frame formats," "Purpose," "Common message types," "Short Note."
 
     *   **IPv4 vs. IPv6:**
-        *   [ ] **Key Differences (Create a comparison table):**
-            *   [ ] **Address Space:** 32-bit vs. 128-bit (solve address exhaustion).
-            *   [ ] **Header:** Simpler, more efficient header in IPv6 (fewer fields, fixed length options).
-            *   [ ] **Security:** IPSec support mandatory/integrated in IPv6.
-            *   [ ] **Autoconfiguration:** Stateless Address Autoconfiguration (SLAAC) in IPv6.
-            *   [ ] **Fragmentation:** Handled by end hosts in IPv6, not routers.
-            *   [ ] **Broadcast:** No broadcast in IPv6 (uses multicast).
-            *   [ ] **Notation:** Dotted decimal vs. hexadecimal colon notation.
-        *   [ ] **Salient Features of IPv6 (List and briefly explain):** Larger address space, simplified header, security, mobility, QoS.
-        *   [ ] **Exam Angle (from pyqs.md):** "Comparative study of IPv4 and IPv6," "Differences," "Salient features of IPv6."
+        *   [x] **Key Differences (Create a comparison table):**
+            *   [x] **Address Space:** 32-bit vs. 128-bit (solve address exhaustion).
+            *   [x] **Header:** Simpler, more efficient header in IPv6 (fewer fields, fixed length options).
+            *   [x] **Security:** IPSec support mandatory/integrated in IPv6.
+            *   [x] **Autoconfiguration:** Stateless Address Autoconfiguration (SLAAC) in IPv6.
+            *   [x] **Fragmentation:** Handled by end hosts in IPv6, not routers.
+            *   [x] **Broadcast:** No broadcast in IPv6 (uses multicast).
+            *   [x] **Notation:** Dotted decimal vs. hexadecimal colon notation.
+        *   [x] **Salient Features of IPv6 (List and briefly explain):** Larger address space, simplified header, security, mobility, QoS.
+        *   [x] **Exam Angle (from pyqs.md):** "Comparative study of IPv4 and IPv6," "Differences," "Salient features of IPv6."
 
 **5. Topic: Routing Algorithms**
 
     *   **Concept:**
-        *   [ ] **Goal of Routing:** Find the "best" path for data packets from source to destination.
-        *   [ ] **Metrics:** Common metrics used (hop count, bandwidth, delay, cost).
-        *   [ ] **Static vs. Dynamic Routing:** Briefly explain the difference.
+        *   [x] **Goal of Routing:** Find the "best" path for data packets from source to destination.
+        *   [x] **Metrics:** Common metrics used (hop count, bandwidth, delay, cost).
+        *   [x] **Static vs. Dynamic Routing:** Briefly explain the difference.
     *   **Distance Vector (e.g., RIP, Bellman-Ford):**
-        *   [ ] **Working Principle:**
-            *   [ ] Each router maintains a distance vector (table of distances to destinations).
-            *   [ ] Routers periodically share their distance vectors ONLY with directly connected neighbors.
-            *   [ ] Routers update their tables based on information from neighbors (Bellman-Ford equation concept: `MyCostToX = CostToNeighbor + NeighborCostToX`).
-        *   [ ] **Bellman-Ford Algorithm:**
-            *   [ ] Understand the iterative process (relaxing edges).
-            *   [ ] **Practice with a small graph example:** Show how tables update step-by-step.
-        *   [ ] **Count-to-Infinity Problem:**
-            *   [ ] Explain what it is (slow convergence when a link goes down, routing loops).
-            *   [ ] Briefly mention solutions (split horizon, poison reverse).
-        *   [ ] **Exam Angle (from pyqs.md):** "Working principle," "Bellman-Ford with example," "Count-to-infinity."
+        *   [x] **Working Principle:**
+            *   [x] Each router maintains a distance vector (table of distances to destinations).
+            *   [x] Routers periodically share their distance vectors ONLY with directly connected neighbors.
+            *   [x] Routers update their tables based on information from neighbors (Bellman-Ford equation concept: `MyCostToX = CostToNeighbor + NeighborCostToX`).
+        *   [x] **Bellman-Ford Algorithm:**
+            *   [x] Understand the iterative process (relaxing edges).
+            *   [x] **Practice with a small graph example:** Show how tables update step-by-step.
+        *   [x] **Count-to-Infinity Problem:**
+            *   [x] Explain what it is (slow convergence when a link goes down, routing loops).
+            *   [x] Briefly mention solutions (split horizon, poison reverse).
+        *   [x] **Exam Angle (from pyqs.md):** "Working principle," "Bellman-Ford with example," "Count-to-infinity."
 
     *   **Link State (e.g., OSPF, Dijkstra):**
-        *   [ ] **Working Principle:**
-            *   [ ] Each router discovers its neighbors and measures cost to them.
-            *   [ ] Each router constructs a Link State Packet (LSP) containing this information.
-            *   [ ] LSPs are flooded to ALL other routers in the network.
-            *   [ ] Each router builds a complete map (topology) of the network.
-            *   [ ] Each router uses Dijkstra's algorithm to compute the shortest path to all destinations.
-        *   [ ] **Dijkstra's Algorithm:**
-            *   [ ] Understand the steps (maintaining set of visited nodes, tentative distances).
-            *   [ ] **Practice with a small graph example:** Show steps of the algorithm.
-        *   [ ] **Comparison (DV vs LS):** Create a table comparing them (information shared, complexity, convergence speed, robustness, resource usage).
-        *   [ ] **Exam Angle (from pyqs.md):** "Working principle," "Dijkstra's with example," "Compare with DV."
+        *   [x] **Working Principle:**
+            *   [x] Each router discovers its neighbors and measures cost to them.
+            *   [x] Each router constructs a Link State Packet (LSP) containing this information.
+            *   [x] LSPs are flooded to ALL other routers in the network.
+            *   [x] Each router builds a complete map (topology) of the network.
+            *   [x] Each router uses Dijkstra's algorithm to compute the shortest path to all destinations.
+        *   [x] **Dijkstra's Algorithm:**
+            *   [x] Understand the steps (maintaining set of visited nodes, tentative distances).
+            *   [x] **Practice with a small graph example:** Show steps of the algorithm.
+        *   [x] **Comparison (DV vs LS):** Create a table comparing them (information shared, complexity, convergence speed, robustness, resource usage).
+        *   [x] **Exam Angle (from pyqs.md):** "Working principle," "Dijkstra's with example," "Compare with DV."
 
     *   **Briefly (Conceptual Understanding):**
-        *   [ ] **Hierarchical Routing:** Purpose (scalability, dividing network into regions/AS).
-        *   [ ] **Broadcast Routing:** Methods (flooding, spanning tree).
-        *   [ ] **Multicast Routing:** Purpose (one-to-many), basic idea (multicast groups, trees).
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain Hierarchical, Broadcast, Multicast routing," "Difference between broadcast and multicast."
+        *   [x] **Hierarchical Routing:** Purpose (scalability, dividing network into regions/AS).
+        *   [x] **Broadcast Routing:** Methods (flooding, spanning tree).
+        *   [x] **Multicast Routing:** Purpose (one-to-many), basic idea (multicast groups, trees).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain Hierarchical, Broadcast, Multicast routing," "Difference between broadcast and multicast."
 
 **6. Review Day 1 & Day 2**
 
-    *   [ ] **Active Recall:**
-        *   [ ] Explain the difference between CSMA/CD and CSMA/CA, including BEB and RTS/CTS.
-        *   [ ] Take a sample IP address and subnet it for a given number of subnets. Calculate all relevant addresses.
-        *   [ ] Verbally explain the steps of Distance Vector and Link State routing using a small mental graph.
-    *   [ ] **Identify Weak Spots:** Revisit subnetting calculations and routing algorithm examples if needed.
+    *   [x] **Active Recall:**
+        *   [x] Explain the difference between CSMA/CD and CSMA/CA, including BEB and RTS/CTS.
+        *   [x] Take a sample IP address and subnet it for a given number of subnets. Calculate all relevant addresses.
+        *   [x] Verbally explain the steps of Distance Vector and Link State routing using a small mental graph.
+    *   [x] **Identify Weak Spots:** Revisit subnetting calculations and routing algorithm examples if needed.
 
 ---
 
@@ -370,116 +362,116 @@ This checklist will guide you in preparing detailed answers for each topic in yo
 **1. Topic: Transport Layer Intro & UDP**
 
     *   **Transport Layer Services:**
-        *   [ ] **Process-to-Process Delivery:** Explain (using port numbers to deliver to specific applications).
-        *   [ ] **Multiplexing/Demultiplexing:**
-            *   [ ] Explain multiplexing at sender (gathering data from multiple app processes, adding headers, passing to network layer).
-            *   [ ] Explain demultiplexing at receiver (delivering segments to correct app process based on port numbers).
-        *   [ ] **(Optional) Reliability:** Provided by TCP, not UDP.
-        *   [ ] **(Optional) Flow/Congestion Control:** Provided by TCP, not UDP.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain transport layer multiplexing and demultiplexing," "QoS parameters (reliability, delay, jitter, bandwidth)."
+        *   [x] **Process-to-Process Delivery:** Explain (using port numbers to deliver to specific applications).
+        *   [x] **Multiplexing/Demultiplexing:**
+            *   [x] Explain multiplexing at sender (gathering data from multiple app processes, adding headers, passing to network layer).
+            *   [x] Explain demultiplexing at receiver (delivering segments to correct app process based on port numbers).
+        *   [x] **(Optional) Reliability:** Provided by TCP, not UDP.
+        *   [x] **(Optional) Flow/Congestion Control:** Provided by TCP, not UDP.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain transport layer multiplexing and demultiplexing," "QoS parameters (reliability, delay, jitter, bandwidth)."
 
     *   **UDP (User Datagram Protocol):**
-        *   [ ] **Characteristics:**
-            *   [ ] Connectionless (no handshake).
-            *   [ ] Unreliable ("best effort" delivery, no ACKs, no retransmissions by UDP itself).
-            *   [ ] Fast, low overhead.
-            *   [ ] No flow control, no congestion control.
-            *   [ ] Message-oriented.
-        *   [ ] **UDP Header Format:**
-            *   [ ] **Draw:** `Source Port | Destination Port | Length | Checksum`.
-            *   [ ] **Explain Purpose of Each Field:**
+        *   [x] **Characteristics:**
+            *   [x] Connectionless (no handshake).
+            *   [x] Unreliable ("best effort" delivery, no ACKs, no retransmissions by UDP itself).
+            *   [x] Fast, low overhead.
+            *   [x] No flow control, no congestion control.
+            *   [x] Message-oriented.
+        *   [x] **UDP Header Format:**
+            *   [x] **Draw:** `Source Port | Destination Port | Length | Checksum`.
+            *   [x] **Explain Purpose of Each Field:**
                 *   Source Port (optional, for reply).
                 *   Destination Port (identifies application process on dest host).
                 *   Length (length of UDP header + data in bytes).
                 *   Checksum (optional in IPv4, mandatory in IPv6; for error detection in header & data).
-        *   [ ] **Common UDP Applications:** DNS, DHCP, SNMP, TFTP, streaming media, online gaming. Explain *why* UDP is suitable for these.
-        *   [ ] **Exam Angle (from pyqs.md):** "Draw and explain header format," "Characteristics," "Short Note."
+        *   [x] **Common UDP Applications:** DNS, DHCP, SNMP, TFTP, streaming media, online gaming. Explain *why* UDP is suitable for these.
+        *   [x] **Exam Angle (from pyqs.md):** "Draw and explain header format," "Characteristics," "Short Note."
 
 **2. Topic: TCP (Transmission Control Protocol)**
 
     *   **TCP Characteristics:**
-        *   [ ] Connection-oriented (requires handshake).
-        *   [ ] Reliable (uses ACKs, sequence numbers, retransmissions).
-        *   [ ] Byte-stream service (application data seen as a continuous stream of bytes).
-        *   [ ] Full-duplex.
-        *   [ ] Provides flow control and congestion control.
+        *   [x] Connection-oriented (requires handshake).
+        *   [x] Reliable (uses ACKs, sequence numbers, retransmissions).
+        *   [x] Byte-stream service (application data seen as a continuous stream of bytes).
+        *   [x] Full-duplex.
+        *   [x] Provides flow control and congestion control.
     *   **TCP Header Format:**
-        *   [ ] **Draw:** A simplified version showing key fields. (Full header is complex, focus on what's usually asked).
-        *   [ ] **Label and Explain Purpose of Key Fields:**
-            *   [ ] Source Port, Destination Port.
-            *   [ ] Sequence Number (byte stream number of first byte in segment).
-            *   [ ] Acknowledgement Number (next sequence number expected from other side).
-            *   [ ] Header Length.
-            *   [ ] **Flags (Control Bits - VERY IMPORTANT):**
-                *   [ ] `SYN` (Synchronize - connection request).
-                *   [ ] `ACK` (Acknowledgement is valid).
-                *   [ ] `FIN` (Finish - terminate connection).
-                *   [ ] `RST` (Reset - abort connection).
-                *   [ ] `PSH` (Push - send data immediately).
-                *   [ ] `URG` (Urgent pointer field is valid).
-            *   [ ] Window Size (for flow control - how many bytes receiver is willing to accept).
-            *   [ ] Checksum (error detection for header & data).
-            *   [ ] Urgent Pointer (if URG flag is set).
-        *   [ ] **Exam Angle (from pyqs.md):** "Draw and explain header," "Compare with UDP header," "List fields in TCP not in UDP and why."
+        *   [x] **Draw:** A simplified version showing key fields. (Full header is complex, focus on what's usually asked).
+        *   [x] **Label and Explain Purpose of Key Fields:**
+            *   [x] Source Port, Destination Port.
+            *   [x] Sequence Number (byte stream number of first byte in segment).
+            *   [x] Acknowledgement Number (next sequence number expected from other side).
+            *   [x] Header Length.
+            *   [x] **Flags (Control Bits - VERY IMPORTANT):**
+                *   [x] `SYN` (Synchronize - connection request).
+                *   [x] `ACK` (Acknowledgement is valid).
+                *   [x] `FIN` (Finish - terminate connection).
+                *   [x] `RST` (Reset - abort connection).
+                *   [x] `PSH` (Push - send data immediately).
+                *   [x] `URG` (Urgent pointer field is valid).
+            *   [x] **Window Size:** (for flow control - how many bytes receiver is willing to accept).
+            *   [x] **Checksum:** (error detection for header & data).
+            *   [x] **Urgent Pointer:** (if URG flag is set).
+        *   [x] **Exam Angle (from pyqs.md):** "Draw and explain header," "Compare with UDP header," "List fields in TCP not in UDP and why."
 
     *   **TCP Connection Establishment (3-way handshake):**
-        *   [ ] **Diagram:** Show the three segments exchanged.
-        *   [ ] **Flag Sequence:**
-            *   [ ] Client -> Server: `SYN` (Client Seq=x)
-            *   [ ] Server -> Client: `SYN` + `ACK` (Server Seq=y, Ack=x+1)
-            *   [ ] Client -> Server: `ACK` (Client Seq=x+1, Ack=y+1)
-        *   [ ] Explain purpose of each step (synchronize sequence numbers).
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain connection establishment," "Diagram."
+        *   [x] **Diagram:** Show the three segments exchanged.
+        *   [x] **Flag Sequence:**
+            *   [x] Client -> Server: `SYN` (Client Seq=x)
+            *   [x] Server -> Client: `SYN` + `ACK` (Server Seq=y, Ack=x+1)
+            *   [x] Client -> Server: `ACK` (Client Seq=x+1, Ack=y+1)
+        *   [x] Explain purpose of each step (synchronize sequence numbers).
+        *   [x] **Exam Angle (from pyqs.md):** "Explain connection establishment," "Diagram."
 
     *   **TCP Connection Release (4-way or 3-way with piggybacking):**
-        *   [ ] **Diagram (4-way):** Show the segments.
-        *   [ ] **Flag Sequence (4-way):**
-            *   [ ] Side 1 -> Side 2: `FIN` (Seq=x)
-            *   [ ] Side 2 -> Side 1: `ACK` (Ack=x+1)
-            *   [ ] Side 2 -> Side 1: `FIN` (Seq=y)
-            *   [ ] Side 1 -> Side 2: `ACK` (Ack=y+1)
-        *   [ ] Explain purpose (each side closes its end independently).
-        *   [ ] Briefly mention 3-way with piggybacked FIN+ACK.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain connection release," "Diagram."
+        *   [x] **Diagram (4-way):** Show the segments.
+        *   [x] **Flag Sequence (4-way):**
+            *   [x] Side 1 -> Side 2: `FIN` (Seq=x)
+            *   [x] Side 2 -> Side 1: `ACK` (Ack=x+1)
+            *   [x] Side 2 -> Side 1: `FIN` (Seq=y)
+            *   [x] Side 1 -> Side 2: `ACK` (Ack=y+1)
+        *   [x] Explain purpose (each side closes its end independently).
+        *   [x] Briefly mention 3-way with piggybacked FIN+ACK.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain connection release," "Diagram."
 
     *   **TCP Flow Control (Sliding Window):**
-        *   [ ] **Concept:** Prevent sender from overwhelming receiver.
-        *   [ ] **How Window Size is Advertised:** Receiver includes its current `Window Size` (buffer space) in TCP header.
-        *   [ ] **Sender Action:** Sender limits amount of unacknowledged data to receiver's advertised window size.
-        *   [ ] **Zero Window:** What happens if receiver advertises window of 0.
-        *   [ ] **Exam Angle (from pyqs.md):** "Discuss TCP flow control."
+        *   [x] **Concept:** Prevent sender from overwhelming receiver.
+        *   [x] **How Window Size is Advertised:** Receiver includes its current `Window Size` (buffer space) in TCP header.
+        *   [x] **Sender Action:** Sender limits amount of unacknowledged data to receiver's advertised window size.
+        *   [x] **Zero Window:** What happens if receiver advertises window of 0.
+        *   [x] **Exam Angle (from pyqs.md):** "Discuss TCP flow control."
 
     *   **TCP Congestion Control:**
-        *   [ ] **Purpose:** Prevent TCP from overwhelming the network itself.
-        *   [ ] **Mechanisms (Conceptual Understanding):**
-            *   [ ] **AIMD (Additive Increase, Multiplicative Decrease):**
-                *   [ ] Additive Increase: Increase congestion window (cwnd) slowly when no congestion.
-                *   [ ] Multiplicative Decrease: Decrease cwnd sharply when congestion detected (e.g., packet loss).
-            *   [ ] **Slow Start:** Start with small cwnd, increase exponentially until threshold or loss.
-            *   [ ] **Congestion Avoidance:** After Slow Start threshold, increase linearly (AIMD's additive part).
-            *   [ ] **Fast Retransmit:** If 3 duplicate ACKs received, assume packet loss and retransmit without waiting for timeout.
-            *   [ ] **Fast Recovery:** After Fast Retransmit, skip Slow Start and go to Congestion Avoidance.
-        *   [ ] **Congestion Detection:** How TCP infers congestion (timeouts, duplicate ACKs).
-        *   [ ] **Exam Angle (from pyqs.md):** "Discuss TCP congestion control," "Short Note on TCP Congestion Control," "AIMD, Slow Start."
-        *   [ ] **TCP Throughput Problem (May 2024 Q6):** Understand how window size, RTT, and channel capacity affect throughput. Practice this problem.
+        *   [x] **Purpose:** Prevent TCP from overwhelming the network itself.
+        *   [x] **Mechanisms (Conceptual Understanding):**
+            *   [x] **AIMD (Additive Increase, Multiplicative Decrease):**
+                *   [x] Additive Increase: Increase congestion window (cwnd) slowly when no congestion.
+                *   [x] Multiplicative Decrease: Decrease cwnd sharply when congestion detected (e.g., packet loss).
+            *   [x] **Slow Start:** Start with small cwnd, increase exponentially until threshold or loss.
+            *   [x] **Congestion Avoidance:** After Slow Start threshold, increase linearly (AIMD's additive part).
+            *   [x] **Fast Retransmit:** If 3 duplicate ACKs received, assume packet loss and retransmit without waiting for timeout.
+            *   [x] **Fast Recovery:** After Fast Retransmit, skip Slow Start and go to Congestion Avoidance.
+        *   [x] **Congestion Detection:** How TCP infers congestion (timeouts, duplicate ACKs).
+        *   [x] **Exam Angle (from pyqs.md):** "Discuss TCP congestion control," "Short Note on TCP Congestion Control," "AIMD, Slow Start."
+        *   [x] **TCP Throughput Problem (May 2024 Q6):** Understand how window size, RTT, and channel capacity affect throughput. Practice this problem.
 
 **3. Topic: Application Layer Protocols**
 
     *   **DNS (Domain Name System):**
-        *   [ ] **Purpose:** Translate human-readable hostnames (e.g., www.google.com) to IP addresses, and vice-versa.
-        *   [ ] **Hierarchical Structure:** Explain (root, TLD, authoritative servers). Draw a simple hierarchy.
-        *   [ ] **Resolver:** Role of client-side resolver.
-        *   [ ] **Iterative vs. Recursive Queries (Concept & Diagram):**
-            *   [ ] **Recursive:** Resolver asks server, server finds answer or asks others.
-            *   [ ] **Iterative:** Resolver asks server, server refers to another server, resolver asks that one.
-        *   [ ] **Record Types (Briefly explain purpose of each):**
-            *   [ ] `A` (IPv4 address).
-            *   [ ] `AAAA` (IPv6 address).
-            *   [ ] `CNAME` (Canonical Name - alias).
-            *   [ ] `MX` (Mail Exchange server).
-            *   [ ] `NS` (Name Server).
-        *   [ ] **Caching:** How DNS responses are cached.
-        *   [ ] **Exam Angle (from pyqs.md):** "Explain services provided by DNS," "Short Note."
+        *   [x] **Purpose:** Translate human-readable hostnames (e.g., www.google.com) to IP addresses, and vice-versa.
+        *   [x] **Hierarchical Structure:** Explain (root, TLD, authoritative servers). Draw a simple hierarchy.
+        *   [x] **Resolver:** Role of client-side resolver.
+        *   [x] **Iterative vs. Recursive Queries (Concept & Diagram):**
+            *   [x] **Recursive:** Resolver asks server, server finds answer or asks others.
+            *   [x] **Iterative:** Resolver asks server, server refers to another server, resolver asks that one.
+        *   [x] **Record Types (Briefly explain purpose of each):**
+            *   [x] `A` (IPv4 address).
+            *   [x] `AAAA` (IPv6 address).
+            *   [x] `CNAME` (Canonical Name - alias).
+            *   [x] `MX` (Mail Exchange server).
+            *   [x] `NS` (Name Server).
+        *   [x] **Caching:** How DNS responses are cached.
+        *   [x] **Exam Angle (from pyqs.md):** "Explain services provided by DNS," "Short Note."
 
     *   **HTTP (HyperText Transfer Protocol):**
         *   [ ] **Purpose:** Protocol for fetching resources like HTML documents (foundation of data communication for WWW).
